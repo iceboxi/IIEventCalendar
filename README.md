@@ -22,7 +22,7 @@ pod 'IIEventCalendar'
 
 ## Author
 
-ice, iceboxidev@gmail.com
+iceboxi, iceboxidev@gmail.com
 
 ## License
 
