@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'IIEventCalendar_Example' do
   pod 'IIEventCalendar', :path => '../'
+  pod 'JTAppleCalendar', '~> 8.0.3'
+  pod 'SwiftLint'
 
   target 'IIEventCalendar_Tests' do
     inherit! :search_paths

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mXL-1B-QlF" customClass="EventListSectionCell" customModule="TeamUp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-Yp-8CD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深夜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-Yc-4ab">
+                    <rect key="frame" x="0.0" y="12" width="31" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.18431372549019609" green="0.23529411764705882" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上午12:00-上午05:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-Wr-Uza">
+                    <rect key="frame" x="274.5" y="12.5" width="131.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <color key="textColor" red="0.58823529411764708" green="0.63921568627450975" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2S3-Yp-8CD" secondAttribute="bottom" id="Hrd-e2-Npn"/>
+                <constraint firstItem="2S3-Yp-8CD" firstAttribute="leading" secondItem="mXL-1B-QlF" secondAttribute="leading" id="L1O-F9-vUL"/>
+                <constraint firstItem="fps-Wr-Uza" firstAttribute="centerY" secondItem="pdI-Yc-4ab" secondAttribute="centerY" id="MP7-DN-9dt"/>
+                <constraint firstItem="2S3-Yp-8CD" firstAttribute="top" secondItem="mXL-1B-QlF" secondAttribute="top" id="ShB-x2-brB"/>
+                <constraint firstAttribute="trailing" secondItem="2S3-Yp-8CD" secondAttribute="trailing" id="TMp-kU-tju"/>
+                <constraint firstItem="pdI-Yc-4ab" firstAttribute="top" secondItem="mXL-1B-QlF" secondAttribute="top" constant="12" id="WLF-y9-tez"/>
+                <constraint firstAttribute="bottom" secondItem="pdI-Yc-4ab" secondAttribute="bottom" constant="4" id="baG-zl-NN4"/>
+                <constraint firstItem="pdI-Yc-4ab" firstAttribute="leading" secondItem="mXL-1B-QlF" secondAttribute="leading" id="pO6-HP-mTS"/>
+                <constraint firstAttribute="trailing" secondItem="fps-Wr-Uza" secondAttribute="trailing" constant="8" id="sKY-jk-ZYa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Y2Z-5k-VTG"/>
+            <connections>
+                <outlet property="sessionLabel" destination="pdI-Yc-4ab" id="jr7-lj-TpC"/>
+                <outlet property="timeLabel" destination="fps-Wr-Uza" id="VKd-4o-3bZ"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="-197.20982142857142"/>
+        </view>
+    </objects>
+</document>
