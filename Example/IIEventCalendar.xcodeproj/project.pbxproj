@@ -173,6 +173,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				5844592124FF4D73000736BB /* SwiftLint */,
 				0E92F3B45EF77E0B4E8E4DCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -313,6 +314,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IIEventCalendar_Tests/Pods-IIEventCalendar_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5844592124FF4D73000736BB /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		6CCBC99D34E04182DE4B0C26 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
