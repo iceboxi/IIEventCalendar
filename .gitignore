@@ -62,13 +62,13 @@ Carthage/Build
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
  
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
+Example/fastlane/report.xml
+Example/fastlane/Preview.html
+Example/fastlane/screenshots
+Example/fastlane/test_output
  
 # End of https://www.gitignore.io/api/swift
-builds/
-fastlane/xcov_output/
-fastlane/test_output/
-swiftlint-results.html
+Example/builds/
+Example/fastlane/xcov_output/
+Example/fastlane/test_output/
+Example/swiftlint-results.html

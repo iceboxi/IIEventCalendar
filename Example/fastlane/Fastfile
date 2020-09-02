@@ -1,0 +1,45 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  	desc "Description of what the lane does"
+  	lane :custom_lane do
+    	# add actions here: https://docs.fastlane.tools/actions
+  	end
+
+  	desc "Does a static analysis of the project. Configure the options in .swiftlint.yml"
+  	lane :lint do
+    	swiftlint(
+	  		mode: :lint,
+			executable: "Pods/SwiftLint/swiftlint",
+			reporter: "html",
+			output_file: "fastlane/swiftlint-results.html",
+			config_file: '.swiftlint.yml',
+			ignore_exit_status: true
+		)
+	end
+
+	desc "Test an measure code coverage"
+	lane :test do
+		run_tests(devices: ["iPhone 11"])
+		xcov(
+			workspace: "IIEventCalendar.xcworkspace",
+			scheme: "IIEventCalendar",
+			output_directory: "fastlane/xcov_output"
+		)
+	end
+end

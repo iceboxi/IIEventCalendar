@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.9rem;
+			}
+			
+			table {
+				border: 1px solid gray;
+				border-collapse: collapse;
+				-moz-box-shadow: 3px 3px 4px #AAA;
+				-webkit-box-shadow: 3px 3px 4px #AAA;
+				box-shadow: 3px 3px 4px #AAA;
+				vertical-align: top;
+				height: 64px;
+			}
+			
+			td, th {
+				border: 1px solid #D3D3D3;
+				padding: 5px 10px 5px 10px;
+			}
+			
+			th {
+				border-bottom: 1px solid gray;
+				background-color: rgba(41,52,92,0.313);
+			}
+			
+			.error, .warning {
+				text-align: center;
+			}
+			
+			.error {
+				background-color: #FF9D92;
+				color: #7F0800;
+			}
+			
+			.warning {
+				background-color: #FFF59E;
+				color: #7F7000;
+			}
+		</style>
+		
+		<title>SwiftLint Report</title>
+	</head>
+	<body>
+		<h1>SwiftLint Report</h1>
+		
+		<hr />
+		
+		<h2>Violations</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 60pt;">
+						<b>Serial No.</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>File</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Location</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Severity</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>Message</b>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right;">1</td>
+					<td>/Users/ice/Documents/IIEventCalendar/IIEventCalendar/Classes/Model/SystemCalendarEventManager.swift</td>
+					<td style="text-align: center;">66:16</td>
+					<td class="warning">Warning</td>
+					<td>TODOs should be resolved (i store id).</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">2</td>
+					<td>/Users/ice/Documents/IIEventCalendar/IIEventCalendar/Classes/Model/SystemCalendarEventManager.swift</td>
+					<td style="text-align: center;">75:12</td>
+					<td class="warning">Warning</td>
+					<td>TODOs should be resolved (i modify).</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">3</td>
+					<td>/Users/ice/Documents/IIEventCalendar/IIEventCalendar/Classes/Model/SystemCalendarEventManager.swift</td>
+					<td style="text-align: center;">94:8</td>
+					<td class="warning">Warning</td>
+					<td>TODOs should be resolved (i 轉換ekevent &lt;-&gt; tuevent).</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">4</td>
+					<td>IIEventCalendar/AppDelegate.swift</td>
+					<td style="text-align: center;">23:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 200 characters or less: currently 285 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">5</td>
+					<td>IIEventCalendar/AppDelegate.swift</td>
+					<td style="text-align: center;">28:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 200 characters or less: currently 218 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">6</td>
+					<td>IIEventCalendar/AppDelegate.swift</td>
+					<td style="text-align: center;">46:0</td>
+					<td class="warning">Warning</td>
+					<td>Files should have a single trailing newline.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">7</td>
+					<td>IIEventCalendar/AppDelegate.swift</td>
+					<td style="text-align: center;">16:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">8</td>
+					<td>IIEventCalendar/AppDelegate.swift</td>
+					<td style="text-align: center;">44:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br/>
+		
+		<h2>Summary</h2>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td>Total files with violations</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Total warnings</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Total errors</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr />
+		
+		<p>
+			Created with
+			<a href="https://github.com/realm/SwiftLint"><b>SwiftLint</b></a>
+			0.39.2 on 2020/9/2
+		</p>
+	</body>
+</html>
