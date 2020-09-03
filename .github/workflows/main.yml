@@ -24,9 +24,6 @@ jobs:
 
       - name: Dump file hierarchy
         run: ls -R
-        
-      - name: Go to folder
-        run: cd IIEventCalendar
 
       - name: Bundle Install
         run: bundle install
