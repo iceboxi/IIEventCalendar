@@ -12,26 +12,34 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  validate-and-test:
     runs-on: macOS-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v1
-
       - name: Dump file hierarchy
-        run: ls -R
-
-      - name: Bundle Install
-        run: bundle install
-        
-      - name: Go to folder
-        run: cd Example
-
-      - name: Build and test
         run: |
+          pwd
+          ls -R
+
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cache RubyGems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gem-
+
+      - name: Test Example Project
+        run: |
+          cd Example
+          pwd
+          bundle install
+          bundle exec pod install
           bundle exec fastlane lint
           bundle exec fastlane test
+
+      - name: Dump file hierarchy
+        run: |
+          pwd
+          ls -R
