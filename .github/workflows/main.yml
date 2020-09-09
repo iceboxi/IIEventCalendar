@@ -26,3 +26,13 @@ jobs:
           bundle exec pod install
           bundle exec fastlane lint
           bundle exec fastlane test
+
+      - name: Checkout master
+        uses: actions/checkout@master
+
+      - name: Publish To trunk
+        run: |
+          cd Example
+          pwd
+          bundle install
+          bundle exec fastlane release_pod project:'IIEventCalendar' version:'0.9.3'
