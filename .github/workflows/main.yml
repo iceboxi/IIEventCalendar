@@ -16,10 +16,11 @@ jobs:
     runs-on: macOS-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Install dependency
         run: |
+          git status
           cd Example
           bundle install
           bundle exec pod install
@@ -29,9 +30,6 @@ jobs:
           cd Example
           bundle exec fastlane lint
           bundle exec fastlane test
-
-#      - name: Checkout master
-#        uses: actions/checkout@master
 
       - name: Publish To trunk
         env:
