@@ -31,6 +31,8 @@ jobs:
         uses: actions/checkout@master
 
       - name: Publish To trunk
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           cd Example
           pwd
