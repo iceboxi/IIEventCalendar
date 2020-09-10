@@ -16,25 +16,26 @@ jobs:
     runs-on: macOS-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@master
+
+      - name: Install dependency
+        run: |
+          cd Example
+          bundle install
+          bundle exec pod install
 
       - name: Test Example Project
         run: |
           cd Example
-          pwd
-          bundle install
-          bundle exec pod install
           bundle exec fastlane lint
           bundle exec fastlane test
 
-      - name: Checkout master
-        uses: actions/checkout@master
+#      - name: Checkout master
+#        uses: actions/checkout@master
 
       - name: Publish To trunk
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           cd Example
-          pwd
-          bundle install
           bundle exec fastlane release_pod project:'IIEventCalendar'

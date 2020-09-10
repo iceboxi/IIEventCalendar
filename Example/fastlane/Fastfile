@@ -55,7 +55,7 @@ platform :ios do
 		if target_version
 			version_bump_podspec(path: spec_path, version_number: target_version)
 		else
-			target_version = version_bump_podspec(path: spec_path, bump_type: "major")
+			target_version = version_bump_podspec(path: spec_path, bump_type: "patch")
 		end
 		
 		# 提交代码到远程仓库
