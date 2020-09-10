@@ -67,7 +67,7 @@ platform :ios do
 		# 提交 tag
 		push_git_tags
 		# 验证 spec 文件
-		pod_lib_lint(allow_warnings: true)
+		# pod_lib_lint(allow_warnings: true)
 		# 检查是否传了 repo 参数
 		if target_repo
 			# pod repo push 'target_repo' 'spec_path'
