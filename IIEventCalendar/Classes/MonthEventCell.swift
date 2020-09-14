@@ -127,7 +127,7 @@ class MonthEventCell: UICollectionViewCell {
     }
 
     private func getMapPath(_ date: Date, start: Date, end: Date) -> (row: Int, column: Int)? {
-        guard date > start, date < end else {
+        guard date >= start, date <= end else {
             return nil
         }
         
